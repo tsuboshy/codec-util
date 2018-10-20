@@ -13,8 +13,21 @@ extra-source-files:
 
 dependencies:
   - base >= 4.7 && < 5
+  - iconv
+  - bytestring
 
-executables:
-  codec-util:
-    source-dirs:      src
-    main:             Main.hs
+library:
+  source-dirs: src
+  ghc-options:
+    - -Wall
+    - -O2
+
+tests:
+  doctest:
+    cpp-options: -DTEST
+    main: Doctest.hs
+    source-dirs:
+      - test
+      - src
+    dependencies:
+      - doctest
