@@ -15,6 +15,7 @@ dependencies:
   - base >= 4.7 && < 5
   - iconv
   - bytestring
+  - charsetdetect
 
 library:
   source-dirs: src
@@ -25,7 +26,7 @@ library:
 tests:
   doctest:
     cpp-options: -DTEST
-    main: Doctest.hs
+    main: Doctest
     source-dirs:
       - test
       - src

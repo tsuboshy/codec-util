@@ -1,4 +1,4 @@
-module Codec.Text.Util.Charset
+module Codec.Text.Util.Charsets
     ( Charset(..)
     ) where
 
@@ -140,10 +140,6 @@ data Charset
     | EucJp
     | EucKr
     | EucTw
-    | Euccn
-    | Eucjp
-    | Euckr
-    | Euctw
     | ExtendedUnixCodePackedFormatForJapanese
     | Gb18030
     | Gb198880
@@ -512,10 +508,6 @@ instance Show Charset where
     show EucJp                                   = "EUC-JP"
     show EucKr                                   = "EUC-KR"
     show EucTw                                   = "EUC-TW"
-    show Euccn                                   = "EUCCN"
-    show Eucjp                                   = "EUCJP"
-    show Euckr                                   = "EUCKR"
-    show Euctw                                   = "EUCTW"
     show ExtendedUnixCodePackedFormatForJapanese = "EXTENDED_UNIX_CODE_PACKED_FORMAT_FOR_JAPANESE"
     show Gb18030                                 = "GB18030"
     show Gb198880                                = "GB_1988-80"

@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 50b796cb471dbf7d1b768b1cc201ca0a1fa1d8fc34a9fd973a4f3aada00e6ea8
+-- hash: 3c03a2e7381076be952895ba4a6eb188eab4b6aa63c8e7eb9348c3a419d7601a
 
 name:           codec-util
 version:        0.1.0.0
@@ -22,7 +22,7 @@ library
   exposed-modules:
       Codec.Text.Util.Charsets
       Codec.Text.Util.Convert
-      Main
+      Codec.Text.Util.Detect
   other-modules:
       Paths_codec_util
   hs-source-dirs:
@@ -31,6 +31,7 @@ library
   build-depends:
       base >=4.7 && <5
     , bytestring
+    , charsetdetect
     , iconv
   default-language: Haskell2010
 
@@ -40,15 +41,17 @@ test-suite doctest
   other-modules:
       Codec.Text.Util.Charsets
       Codec.Text.Util.Convert
-      Main
+      Codec.Text.Util.Detect
       Paths_codec_util
   hs-source-dirs:
       test
       src
+  ghc-options: -main-is Doctest
   cpp-options: -DTEST
   build-depends:
       base >=4.7 && <5
     , bytestring
+    , charsetdetect
     , doctest
     , iconv
   default-language: Haskell2010
